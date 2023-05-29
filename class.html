@@ -19,6 +19,9 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.min.css" rel="stylesheet">
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
 </head>
 
 <body class="bg-white">
@@ -840,30 +843,21 @@
                         <form>
                             <div class="form-row">
                                 <div class="col form-group">
-                                    <input type="text" class="form-control form-control-lg bg-dark text-white" placeholder="Peso (KG)">
+                                    <input type="text" id="peso" class="form-control form-control-lg bg-dark text-white" placeholder="Peso (KG)">
                                 </div>
                                 <div class="col form-group">
-                                    <input type="text" class="form-control form-control-lg bg-dark text-white" placeholder="Altura (CM)">
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="col form-group">
-                                    <input type="text" class="form-control form-control-lg bg-dark text-white" placeholder="Idade">
-                                </div>
-                                <div class="col form-group">
-                                    <select class="custom-select custom-select-lg bg-dark text-muted">
-                                        <option>Sexo</option>
-                                        <option>Masculino</option>
-                                        <option>Feminino</option>
-                                    </select>
+                                    <input type="text" id="altura" class="form-control form-control-lg bg-dark text-white" placeholder="Altura (CM)">
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="col">
-                                    <input type="button" class="btn btn-lg btn-block btn-dark border-light"
+                                    <input type="button" id="calcular" class="btn btn-lg btn-block btn-dark border-light"
                                         value="Calcular">
                                 </div>
                             </div>
+                            <span>
+                                <h4 id="resultado" class="text-center text-light"></h4>
+                            </span>
                         </form>
                     </div>
                 </div>
