@@ -33,3 +33,13 @@
     });
 })(jQuery);
 
+function calcularIMC() {
+    var peso = parseFloat(document.getElementById("peso").value);
+    var altura = parseFloat(document.getElementById("altura").value);
+
+    var imc = peso / (altura/100 * altura/100);
+
+    document.getElementById("resultado").innerHTML = "Seu IMC é: " + imc.toFixed(2);
+}
+
+document.getElementById("calcular").addEventListener("click", calcularIMC);
