@@ -36,9 +36,12 @@
 function calcularIMC() {
     var peso = parseFloat(document.getElementById("peso").value);
     var altura = parseFloat(document.getElementById("altura").value);
-
+    if (isNaN(peso) || isNaN(altura) || peso === 0 || altura === 0){
+        document.getElementById("resultado").innerHTML = "Por favor, preencha peso e altura corretamente.";
+        return;
+    }
+    
     var imc = peso / (altura/100 * altura/100);
-
     document.getElementById("resultado").innerHTML = "Seu IMC é: " + imc.toFixed(2);
 }
 
