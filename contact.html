@@ -86,9 +86,10 @@
             <div class="col-md-6 pb-5">
                 <div class="contact-form">
                     <div id="success"></div>
-                    <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                    <form action="https://api.staticforms.xyz/submit" method="post">
+                        <input type="hidden" name="accessKey" value="f7ca3baf-ea93-477f-8dd7-fce830c8d49f">
                         <div class="control-group">
-                            <input type="text" class="form-control" id="name" placeholder="Seu nome" required="required" data-validation-required-message="Please enter your name" />
+                            <input type="text" class="form-control" name id="name" placeholder="Seu nome" required="required" data-validation-required-message="Please enter your name" />
                             <p class="help-block text-danger"></p>
                         </div>
                         <div class="control-group">
@@ -106,6 +107,8 @@
                         <div>
                             <button class="btn btn-outline-primary" type="submit" id="sendMessageButton">Enviar mensagem</button>
                         </div>
+                        <input type="hidden" name="redirectTo" value="https://annacarolinadamasceno.github.io/upfit/contact.html">
+                        <input type="text" name="honeypot" style="display: none;">
                     </form>
                 </div>
             </div>
